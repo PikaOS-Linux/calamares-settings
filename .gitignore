@@ -1,1 +1,4 @@
 debian/files
+debian/calamares-settings-vanilla
+debian/calamares-settings-ubuntu-common
+debian/debhelper-build-stamp
