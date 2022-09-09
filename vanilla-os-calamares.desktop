@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Install Vanilla OS
+Type=Application
+Version=1.0
+_Name=Install Vanilla OS
+_GenericName=Install Vanilla OS
+Exec=bash -c "export BROWSER='sudo -H -u firefox'; sudo -E calamares"
+_Comment=Calamares — System Installer
+Icon=calamares
+Terminal=false
+StartupNotify=true
+Categories=Qt;System;
+Keywords=installer;calamares;system;install
