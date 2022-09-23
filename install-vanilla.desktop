@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Install Vanilla OS
+GenericName=Calamares Installer
+Exec=install-vanilla
+Comment=Calamares — Installer for Vanilla OS Live
+Keywords=calamares;system;install;vanilla;installer
+Icon=install-vanilla
+Terminal=false
+Categories=Qt;System;
+StartupWMClass=calamares
+StartupNotify=True

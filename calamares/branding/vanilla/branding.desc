@@ -1,0 +1,32 @@
+---
+componentName: vanilla
+
+windowExpanding:    normal
+windowSize: 800px,520px
+windowPlacement: center
+
+strings:
+    productName:         Vanilla OS
+    shortProductName:    Vanilla OS
+    version:             22.04.1
+    shortVersion:        jammy
+    versionedName:       Vanilla OS
+    shortVersionedName:  Vanilla OS
+    bootloaderEntryName: Vanilla OS
+    productUrl:          https://github.com/Vanilla-OS
+    supportUrl:          https://github.com/Vanilla-OS
+
+images:
+    productLogo:         "logo.png"
+    productIcon:         "icon.png"
+    productWelcome:      "welcome.png"
+
+slideshow:               "show.qml"
+
+slideshowAPI:            1
+
+style:
+   sidebarBackground:    "#ffffff"
+   sidebarText:          "#242424"
+   sidebarTextSelect:    "#ffffff"
+   sidebarTextHighlight: "#3584e4"

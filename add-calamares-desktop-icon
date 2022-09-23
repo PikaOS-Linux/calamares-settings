@@ -1,0 +1,14 @@
+#!/bin/sh
+DESKTOP=$(xdg-user-dir DESKTOP)
+mkdir -p $DESKTOP
+if [ -f /usr/bin/lxsession ]; then
+    echo "[Desktop Entry]" > $DESKTOP/install-vanilla.desktop
+    echo "Type=Link" >> $DESKTOP/install-vanilla.desktop
+    echo "Name=Install Vanilla OS" >> $DESKTOP/install-vanilla.desktop
+    echo "Icon=install-vanilla" >> $DESKTOP/install-vanilla.desktop
+    echo "URL=/usr/share/applications/install-vanilla.desktop" \
+          >> $DESKTOP/install-vanilla.desktop
+else
+    cp /usr/share/applications/install-vanilla.desktop $DESKTOP
+    chmod +x $DESKTOP/install-vanilla.desktop
+fi
