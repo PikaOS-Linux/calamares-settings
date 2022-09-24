@@ -1,5 +1,4 @@
 calamares etc
-calamares-modules/* usr/lib/calamares/modules
 *.desktop usr/share/applications
 install-vanilla usr/bin
 artwork/install-vanilla.png usr/share/pixmaps
