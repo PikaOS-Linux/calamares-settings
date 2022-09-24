@@ -15,8 +15,6 @@ Presentation
         Image {
             anchors.centerIn: parent
             id: image1
-            width: 600
-            fillMode: Image.PreserveAspectFit
             horizontalAlignment: Text.Center
             smooth: true
             source: "Installing.png"
