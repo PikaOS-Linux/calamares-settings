@@ -1,28 +1,47 @@
-Source: calamares-settings-vanilla
-Section: utils
+Source: calamares-settings-ubuntu
+Section: devel
 Priority: optional
-Maintainer: Mirko Brombin <send@mirko.pm>
-Build-Depends: debhelper-compat (= 13),
-               intltool,
-               qttools5-dev-tools, 
-               libglib2.0-bin
+Maintainer: Vanilla OS Developers <https://github.com/vanilla-os>
+Uploaders: Mirko Brombin <send@mirko.pm>
+Build-Depends: debhelper-compat (= 13), intltool, qttools5-dev-tools
 Standards-Version: 4.6.0
-Rules-Requires-Root: no
-Homepage: https://github.com/Vanilla-OS
-Vcs-Browser: https://github.com/Vanilla-OS
-Vcs-Git: https://github.com/Vanilla-OS/calamares-settings-vanilla
+Homepage: https://github.com/vanilla-os
+Vcs-Git: https://github.com/vanilla-os
+Vcs-Browser: https://github.com/vanilla-os
 
 Package: calamares-settings-vanilla
 Architecture: all
-Depends: calamares,
+Depends: calamares-settings-ubuntu-common (>= ${binary:Version}),
+         ${misc:Depends}
+Breaks: calamares-settings-ubuntustudio
+Conflicts: calamares-settings-ubuntustudio
+Description: Vanilla OS Calamares Settings and Branding
+ This package contains the Calamares settings and branding for Vanilla OS.
+ As part of the branding the installer slideshow is contained within.
+
+Package: calamares-settings-ubuntu-common
+Architecture: any
+Depends: calamares (>= 3.2.14~),
          cryptsetup,
          keyutils,
+         python3,
          qml-module-qtquick-window2,
          qml-module-qtquick2,
+         squashfs-tools,
          ${misc:Depends}
-Provides: calamares-settings
-Description: Vanilla OS Calamares Settings and Branding
- This package contains the Calamares settings and branding for vanilla-os.
+Description: Common Calamares Settings
+ This package contains the common Calamares settings for all flavors.
+ There is also a automirror Python script to set sources based on
+ geolocation.
+
+Package: calamares-settings-ubuntustudio
+Architecture: all
+Depends: calamares-settings-ubuntu-common (>= ${binary:Version}),
+         ${misc:Depends}
+Breaks: calamares-settings-vanilla
+Conflicts: calamares-settings-vanilla
+Description: Ubuntu Studio Calamares Settings and Branding
+ This package contains the Calamares settings and branding for Ubuntu Studio.
  As part of the branding the installer slideshow is contained within.
- The settings ensure a proper Vanilla OS desktop is installed with the
- cinnamon desktop environment.
+ The settings ensure a proper Ubuntu Studio desktop is installed with the
+ KDE Plasma desktop environment.

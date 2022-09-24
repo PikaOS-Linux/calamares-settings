@@ -1,5 +1,0 @@
-# Only meant to be run by calamares, so its scripts wouldn't have manpages
-calamares-settings-vanilla: binary-without-manpage
-
-# We don't provide this file on purpose
-calamares-settings-vanilla: diversion-for-unknown-file

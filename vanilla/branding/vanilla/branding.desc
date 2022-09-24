@@ -1,0 +1,31 @@
+---
+componentName: vanilla
+
+windowExpanding:    normal
+windowSize: 800px,520px
+windowPlacement: center
+
+strings:
+    productName:         Vanilla OS
+    shortProductName:    Vanilla OS
+    version:             22.10
+    shortVersion:        kinetic
+    versionedName:       Vanilla OS
+    shortVersionedName:  Vanilla OS 22.10
+    bootloaderEntryName: Vanilla OS
+    productUrl:          https://github.com/vanilla-os/
+    supportUrl:          https://github.com/vanilla-os/
+
+images:
+    productLogo:         "logo.png"
+    productIcon:         "icon.png"
+    productWelcome:      "Welcome.png"
+
+slideshow:               "show.qml"
+
+sidebar:                 none
+
+style:
+   sidebarBackground:    "#292F34"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#292F34"

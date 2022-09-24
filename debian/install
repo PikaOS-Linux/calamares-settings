@@ -1,7 +1,0 @@
-calamares etc
-*.desktop usr/share/applications
-install-vanilla usr/bin
-artwork/install-vanilla.png usr/share/pixmaps
-conf/96_calamares-settings-vanilla.gschema.override usr/share/glib-2.0/schemas
-conf/calamares-desktop-icon.desktop etc/xdg/autostart
-add-calamares-desktop-icon usr/bin
