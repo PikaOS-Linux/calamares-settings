@@ -1,10 +1,10 @@
 Package: calamares-settings-ubuntustudio
 Source: calamares-settings-ubuntu
-Version: 0.0.10
+Version: 0.0.11
 Architecture: all
 Maintainer: Vanilla OS Developers <https://github.com/vanilla-os>
 Installed-Size: 2948
-Depends: calamares-settings-ubuntu-common (>= 0.0.10)
+Depends: calamares-settings-ubuntu-common (>= 0.0.11)
 Conflicts: calamares-settings-vanilla
 Breaks: calamares-settings-vanilla
 Section: devel
