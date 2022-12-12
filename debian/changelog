@@ -1,5 +1,5 @@
-calamares-settings-ubuntu (0.0.14) jammy; urgency=low
+calamares-settings-ubuntu (1.0) kinetic; urgency=low
 
   * First release
 
- -- Mirko Brombin <send@mirko.pm>  Mon, 08 Sep 2022 23:02:00 +0000
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
