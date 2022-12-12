@@ -1,8 +1,7 @@
 Source: calamares-settings-ubuntu
 Section: devel
 Priority: optional
-Maintainer: Vanilla OS Developers <https://github.com/vanilla-os>
-Uploaders: Mirko Brombin <send@mirko.pm>
+Maintainer: Ward Nakchbandi <hotrod.master@hotmail.com>
 Build-Depends: debhelper-compat (= 13), intltool, qttools5-dev-tools
 Standards-Version: 4.6.0
 
