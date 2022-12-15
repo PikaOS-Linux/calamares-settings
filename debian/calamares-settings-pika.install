@@ -1,5 +1,6 @@
 pika/branding/ etc/calamares/
 pika/calamares-logs-helper usr/bin/
+pika/pika-installer usr/bin/
 pika/pika-calamares.desktop usr/share/applications/
 pika/modules/ etc/calamares/
 pika/settings.conf etc/calamares/

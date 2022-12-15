@@ -8,7 +8,7 @@ Standards-Version: 4.6.0
 Package: calamares-settings-pika
 Architecture: all
 Depends: calamares-settings-ubuntu-common (>= ${binary:Version}),
-         ${misc:Depends}
+         ${misc:Depends}, zenity
 Breaks: calamares-settings-ubuntustudio
 Conflicts: calamares-settings-ubuntustudio
 Description: PikaOS Calamares Settings and Branding
