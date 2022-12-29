@@ -30,27 +30,12 @@ Description: Common Calamares Settings
  There is also a automirror Python script to set sources based on
  geolocation.
  
- Package: calamares-settings-pika-kde
+Package: calamares-settings-pika-kde
 Architecture: all
 Depends: calamares-settings-ubuntu-common (>= ${binary:Version}),
          ${misc:Depends}, zenity
 Breaks: calamares-settings-pika
 Conflicts: calamares-settings-pika
-Description: PikaOS Calamares Settings and Branding
+Description: PikaOS KDE Calamares Settings and Branding
  This package contains the Calamares settings and branding for PikaOS.
  As part of the branding the installer slideshow is contained within.
-
-Package: calamares-settings-ubuntu-common
-Architecture: any
-Depends: calamares (>= 3.2.14~),
-         cryptsetup,
-         keyutils,
-         python3,
-         qml-module-qtquick-window2,
-         qml-module-qtquick2,
-         squashfs-tools,
-         ${misc:Depends}
-Description: Common Calamares Settings
- This package contains the common Calamares settings for all flavors.
- There is also a automirror Python script to set sources based on
- geolocation.
