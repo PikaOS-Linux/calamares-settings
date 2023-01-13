@@ -1,6 +1,7 @@
 pika-kde/branding/ etc/calamares/
 pika-kde/calamares-logs-helper usr/bin/
 pika-kde/pika-installer usr/bin/
-pika-kde/pika-calamares.desktop usr/share/applications/
+pika-kde/pika-installer.desktop usr/share/applications/
+pika/pika-installer-autostart.desktop etc/xdg/autostart
 pika-kde/modules/ etc/calamares/
 pika-kde/settings.conf etc/calamares/
