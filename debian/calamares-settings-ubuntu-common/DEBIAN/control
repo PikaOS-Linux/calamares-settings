@@ -1,6 +1,6 @@
 Package: calamares-settings-ubuntu-common
 Source: calamares-settings-ubuntu
-Version: 100:3.12
+Version: 100:4.2
 Architecture: amd64
 Maintainer: Ward Nakchbandi <hotrod.master@hotmail.com>
 Installed-Size: 39
