@@ -6,6 +6,7 @@ ROOT_FLAGS=$(findmnt --fstab -T / -o Options | tail +2)
 if [ -d /sys/firmware/efi ]
 then 
 	echo "UEFI Detected! Installing systemd-boot"
+	for i in $(/usr/bin/apt --installed list 2>/dev/null | grep grub | cut -d"/" -f1 | grep -vi grub-common) ; do apt remove $i || echo "no action needed for $i" ; done
 	bootctl install
 	SDB_EFI=$(bootctl -x)
 	cp -f /etc/calamares/config/loader.conf $SDB_EFI/loader/loader.conf
