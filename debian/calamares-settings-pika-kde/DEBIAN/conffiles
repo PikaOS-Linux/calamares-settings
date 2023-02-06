@@ -1,0 +1,17 @@
+/etc/calamares/branding/pika/Installing.png
+/etc/calamares/branding/pika/Welcome.png
+/etc/calamares/branding/pika/branding.desc
+/etc/calamares/branding/pika/icon.png
+/etc/calamares/branding/pika/logo.png
+/etc/calamares/branding/pika/pika-logo-text.svg
+/etc/calamares/branding/pika/show.qml
+/etc/calamares/modules/after_shellprocess_bootloader_context.conf
+/etc/calamares/modules/displaymanager.conf
+/etc/calamares/modules/packages.conf
+/etc/calamares/modules/partition.conf
+/etc/calamares/modules/shellprocess_gdmreset.conf
+/etc/calamares/modules/unpackfs.conf
+/etc/calamares/modules/users.conf
+/etc/calamares/modules/welcome.conf
+/etc/calamares/settings.conf
+/etc/xdg/autostart/pika-installer-autostart.desktop
