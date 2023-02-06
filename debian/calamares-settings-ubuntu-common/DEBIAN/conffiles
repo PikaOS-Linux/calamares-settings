@@ -1,4 +1,3 @@
-/etc/calamares/modules/before_shellprocess_bootloader_context.conf
 /etc/calamares/modules/finished.conf
 /etc/calamares/modules/fstab.conf
 /etc/calamares/modules/locale.conf

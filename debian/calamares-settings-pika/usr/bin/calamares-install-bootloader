@@ -8,11 +8,7 @@ then
 	echo "UEFI Detected! Installing systemd-boot"
 	bootctl install
 	SDB_EFI=$(bootctl -x)
-	cat << EOF > $SDB_EFI/loader/loader.conf
-	timeout 5
-	console-mode keep
-	editor yes
-	EOF
+	cp -f /etc/calamares/config/loader.conf $SDB_EFI/loader/loader.conf
 	mkdir -p /tmp/update-systemd-boot
 	echo "root=$ROOT_UUID rootflags=$ROOT_FLAGS quiet splash bgrt_disable $vt_handoff" > /tmp/update-systemd-boot/options
 	sudo update-systemd-boot -o

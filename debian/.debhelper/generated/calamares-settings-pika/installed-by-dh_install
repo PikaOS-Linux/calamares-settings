@@ -6,3 +6,4 @@
 ./pika/pika-installer-autostart.desktop
 ./pika/modules/
 ./pika/settings.conf
+./pika/loader.conf

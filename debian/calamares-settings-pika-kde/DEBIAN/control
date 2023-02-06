@@ -1,10 +1,10 @@
 Package: calamares-settings-pika-kde
 Source: calamares-settings-ubuntu
-Version: 100:4.2
+Version: 100:4.3
 Architecture: all
 Maintainer: Ward Nakchbandi <hotrod.master@hotmail.com>
-Installed-Size: 121
-Depends: calamares-settings-ubuntu-common (>= 100:4.2), zenity
+Installed-Size: 122
+Depends: calamares-settings-ubuntu-common (>= 100:4.3), zenity
 Conflicts: calamares-settings-pika
 Breaks: calamares-settings-pika
 Section: devel

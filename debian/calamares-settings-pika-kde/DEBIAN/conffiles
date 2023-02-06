@@ -5,7 +5,7 @@
 /etc/calamares/branding/pika/logo.png
 /etc/calamares/branding/pika/pika-logo-text.svg
 /etc/calamares/branding/pika/show.qml
-/etc/calamares/modules/after_shellprocess_bootloader_context.conf
+/etc/calamares/config/loader.conf
 /etc/calamares/modules/displaymanager.conf
 /etc/calamares/modules/packages.conf
 /etc/calamares/modules/partition.conf
