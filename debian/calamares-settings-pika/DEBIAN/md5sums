@@ -1,7 +1,0 @@
-70016a8c1d27f4f1974505e9ce3b99d6  usr/bin/calamares-install-bootloader
-cceea03c20fc558e14e90fd213c31ed7  usr/bin/calamares-logs-helper
-5a74bbe22b0eafb574823bd564375d20  usr/bin/pika-installer
-b347a2931eaa3024e5a2678526824f3a  usr/share/applications/pika-installer.desktop
-95566f8812994e67f462e0e4cf08de9a  usr/share/doc/calamares-settings-pika/changelog.gz
-4bf61094717a4e883b66b2fb4456c499  usr/share/doc/calamares-settings-pika/copyright
-1dcd91efac6f87d31383b802b434d382  usr/share/lintian/overrides/calamares-settings-pika
