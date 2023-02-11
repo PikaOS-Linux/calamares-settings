@@ -1,11 +1,19 @@
 #! /usr/bin/bash
-if ping google.com -c2
+if ping google.com -c4
 then
-	if zenity --warning --width=600 --height=300 --title='Important info' --text="`printf "There are a few things to keep in mind: \n\n1 - You understand that this distribution is -NOT- to be considered an ‘Ubuntu Flavor’. \n\n2 - This is a hobby distribution, so we will try our best to provide formal support but it will -NOT- be guaranteed. \n\n3 - Although PikaOS might provide identical patches and user experience to the Nobara project, we are -NOT- directly a part of them\n\nso questions and bug reports should not be sent directly to them. (they don't have to deal with it!) \n\n4 - The installer may freeze for 5 to 10 min after going through with the partition scheme, DO NOT INTERRUPT IT! or you will end up with a corrupted system. \n\n5 - Try to use "pikman" instead of "apt" when using the terminal, it is much faster! \n\n6 - You understand the xone driver downloads needed binaries locally and does not directly package or distribute any copyrighted firmware or other related data. \n\n7 - In case you need the login info for this session: \n\n - username: "pikaos" \n\n - password is "pikaos" "`"
-	then
-		echo pikaos | sudo -S calamares -D6
-	fi
-else
-	zenity --error --text='Please connect to a stable internet connection!'
-	exit 1
+if zenity --warning --width=600 --height=300 --title='Important info' --text="`printf "There are a few things to keep in mind: \n\n1 - You understand that this distribution is -NOT- to be considered an ‘Ubuntu Flavor’. \n\n2 - This is a hobby distribution, so we will try our best to provide formal support but it will -NOT- be guaranteed. \n\n3 - Although PikaOS might provide identical patches and user experience to the Nobara project, we are -NOT- directly a part of them\n\nso questions and bug reports should not be sent directly to them. (they don't have to deal with it!) \n\n4 - The installer may freeze for 5 to 10 min after going through with the partition scheme, DO NOT INTERRUPT IT! or you will end up with a corrupted system. \n\n5 - Try to use "pikman" instead of "apt" when using the terminal, it is much faster! \n\n6 - You understand the xone driver downloads needed binaries locally and does not directly package or distribute any copyrighted firmware or other related data. \n\n7 - In case you need the login info for this session: \n\n - username: "pikaos" \n\n - password is "pikaos" "`"
+then
+echo pikaos | sudo -S calamares -D6
 fi
+else
+if zenity --icon-name=dialog-error --question --title='Error' --text="`printf "Please connect to a stable internet connection! then launch the installer again \n\nIf you ignore the installation may fail! "`" --cancel-label=Ignore --ok-label="Accept"
+then
+exit 1
+else
+if zenity --warning --width=600 --height=300 --title='Important info' --text="`printf "There are a few things to keep in mind: \n\n1 - You understand that this distribution is -NOT- to be considered an ‘Ubuntu Flavor’. \n\n2 - This is a hobby distribution, so we will try our best to provide formal support but it will -NOT- be guaranteed. \n\n3 - Although PikaOS might provide identical patches and user experience to the Nobara project, we are -NOT- directly a part of them\n\nso questions and bug reports should not be sent directly to them. (they don't have to deal with it!) \n\n4 - The installer may freeze for 5 to 10 min after going through with the partition scheme, DO NOT INTERRUPT IT! or you will end up with a corrupted system. \n\n5 - Try to use "pikman" instead of "apt" when using the terminal, it is much faster! \n\n6 - You understand the xone driver downloads needed binaries locally and does not directly package or distribute any copyrighted firmware or other related data. \n\n7 - In case you need the login info for this session: \n\n - username: "pikaos" \n\n - password is "pikaos" "`"
+then
+echo pikaos | sudo -S calamares -D6
+fi
+fi
+fi
+
