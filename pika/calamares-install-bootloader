@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-ROOT_BLOCK=$(lsblk -ndo pkname $(findmnt -T / --df | tail +2 | cut -f1 -d" " | cut -d"[" -f1))
+BOOT_BLOCK=$(lsblk -ndo pkname $(df -P "/boot" | awk 'END{print $1}'))
 ROOT_UUID=$(findmnt --fstab -T / -o SOURCE | tail +2)
 ROOT_FLAGS=$(findmnt --fstab -T / -o Options | tail +2)
 
@@ -8,15 +8,16 @@ then
 	echo "UEFI Detected! Installing systemd-boot"
 	for i in $(/usr/bin/apt --installed list 2>/dev/null | grep grub | cut -d"/" -f1 | grep -vi grub-common) ; do apt remove -y $i || echo "no action needed for $i" ; done
 	bootctl install
-	SDB_EFI=$(bootctl -x)
-	cp -f /etc/calamares/config/loader.conf $SDB_EFI/loader/loader.conf
+	SDB_BOOT=$(bootctl -x)
+	cp -f /etc/calamares/config/loader.conf $SDB_BOOT/loader/loader.conf
 	mkdir -p /tmp/update-systemd-boot
 	echo "root=$ROOT_UUID rootflags=$ROOT_FLAGS quiet splash bgrt_disable $vt_handoff" > /tmp/update-systemd-boot/options
 	sudo update-systemd-boot -o
 	sudo update-systemd-boot -x
 else
 	echo "Legacy BIOS Detected! Installing grub"
-	grub-install /dev/$ROOT_BLOCK
+	/usr/bin/apt install grub2-common grub-pc -y
+	grub-install /dev/$BOOT_BLOCK
 	grub-mkconfig -o /boot/grub/grub.cfg
 	update-grub
 fi
