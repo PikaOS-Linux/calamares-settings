@@ -1,9 +1,0 @@
-/etc/calamares/modules/finished.conf
-/etc/calamares/modules/fstab.conf
-/etc/calamares/modules/locale.conf
-/etc/calamares/modules/machineid.conf
-/etc/calamares/modules/mount.conf
-/etc/calamares/modules/shellprocess_add386arch.conf
-/etc/calamares/modules/shellprocess_bootloader.conf
-/etc/calamares/modules/shellprocess_chroot.conf
-/etc/calamares/modules/shellprocess_logs.conf

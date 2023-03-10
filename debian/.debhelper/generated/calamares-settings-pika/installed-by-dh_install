@@ -1,9 +1,0 @@
-./pika/branding/
-./pika/calamares-logs-helper
-./pika/pika-installer
-./pika/calamares-install-bootloader
-./pika/pika-installer.desktop
-./pika/pika-installer-autostart.desktop
-./pika/modules/
-./pika/settings.conf
-./pika/loader.conf
