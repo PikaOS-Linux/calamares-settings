@@ -17,7 +17,7 @@ then
 else
 	echo "Legacy BIOS Detected! Installing grub"
 	/usr/bin/apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 /var/cache/apt/archives/grub-gfxpayload-lists*.deb /var/cache/apt/archives/grub-pc*.deb /var/cache/apt/archives/grub-pc-bin*.deb /var/cache/apt/archives/grub2-common*.deb --allow-unauthenticated
-	grub-install /dev/$BOOT_BLOCK
+	grub-install --boot-directory=/boot /dev/$BOOT_BLOCK
 	grub-mkconfig -o /boot/grub/grub.cfg
 	update-grub
 fi
