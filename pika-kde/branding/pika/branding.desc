@@ -17,13 +17,13 @@ strings:
     supportUrl:          https://github.com/PikaOS-Linux
 
 images:
-    productLogo:         "logo.png"
+    productLogo:         "icon.png"
     productIcon:         "icon.png"
-    productWelcome:      "Welcome.png"
+    productWelcome:      "background.jpg"
 
 slideshow:               "show.qml"
 
-sidebar:                 none
+sidebar: widget
 
 style:
    sidebarBackground:    "#292F34"
