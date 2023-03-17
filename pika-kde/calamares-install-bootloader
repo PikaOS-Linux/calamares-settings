@@ -8,12 +8,12 @@ then
 	echo "UEFI Detected! Installing systemd-boot"
 	for i in $(/usr/bin/apt --installed list 2>/dev/null | grep grub | cut -d"/" -f1 | grep -vi grub-common) ; do apt remove -y $i || echo "no action needed for $i" ; done
 	bootctl install
-	SDB_BOOT=$(bootctl -x)
-	cp -f /etc/calamares/config/loader.conf $SDB_BOOT/loader/loader.conf
+	SDB_EFI=$(bootctl -x)
+	cp -f /etc/calamares/config/loader.conf $SDB_EFI/loader/loader.conf
 	mkdir -p /tmp/update-systemd-boot
 	echo "root=$ROOT_UUID rootflags=$ROOT_FLAGS quiet splash bgrt_disable $vt_handoff" > /tmp/update-systemd-boot/options
 	sudo update-systemd-boot -o
-	sudo update-systemd-boot -x
+	sudo update-systemd-boot -x || echo "not found"
 else
 	echo "Legacy BIOS Detected! Installing grub"
 	/usr/bin/apt install --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 /var/cache/apt/archives/grub-gfxpayload-lists*.deb /var/cache/apt/archives/grub-pc*.deb /var/cache/apt/archives/grub-pc-bin*.deb /var/cache/apt/archives/grub2-common*.deb --allow-unauthenticated
