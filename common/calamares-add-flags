@@ -1,15 +1,12 @@
 #! /usr/bin/bash
-PART_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "$2" | awk 'END{print $1}'))
-PART_DEVICE=$(df -P -h -T "$2" | awk 'END{print $1}')
+PART_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "$1" | awk 'END{print $1}'))
+PART_DEVICE=$(df -P -h -T "$1" | awk 'END{print $1}')
 PART_DEVICE_NUM=$(echo $PART_DEVICE | sed "s#$PART_BLOCK##")
 
 echo "Partition Block: $PART_BLOCK"
 echo "Partition Device: $PART_DEVICE"
 echo "Partition Device ID: $PART_DEVICE_NUM"
 
-# Add bls_PART to /root partition
-if [[ $1 == bls_boot ]]
-then
-echo "Adding flag: $1"
-sudo parted $PART_BLOCK set $PART_DEVICE_NUM bls_boot on
-fi
+
+echo "setting flag $2 to $3 on $1 ($PART_DEVICE)"
+sudo parted $PART_BLOCK set $PART_DEVICE_NUM $2 $3
