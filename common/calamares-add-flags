@@ -1,0 +1,9 @@
+#! /usr/bin/bash
+BOOT_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "/boot" | awk 'END{print $1}'))
+BOOT_DEVICE=$(df -P -h -T "/boot" | awk 'END{print $1}')
+BOOT_DEVICE_NUM=$(echo $BOOT_DEVICE | sed "s#$BOOT_BLOCK##")
+ROOT_UUID=$(findmnt --fstab -T / -o SOURCE | tail +2)
+ROOT_FLAGS=$(findmnt --fstab -T / -o Options | tail +2)
+
+# Add bls_boot to /root partition
+sudo parted $BOOT_BLOCK set $BOOT_DEVICE_NUM bls_boot on
