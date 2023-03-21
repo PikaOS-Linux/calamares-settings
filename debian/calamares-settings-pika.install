@@ -1,5 +1,4 @@
 pika/branding/ etc/calamares/
-pika/calamares-logs-helper usr/bin/
 pika/pika-installer usr/bin/
 pika/pika-installer.desktop usr/share/applications/
 pika/pika-installer-autostart.desktop etc/xdg/autostart
