@@ -1,9 +1,15 @@
 #! /usr/bin/bash
-BOOT_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "/boot" | awk 'END{print $1}'))
-BOOT_DEVICE=$(df -P -h -T "/boot" | awk 'END{print $1}')
-BOOT_DEVICE_NUM=$(echo $BOOT_DEVICE | sed "s#$BOOT_BLOCK##")
-ROOT_UUID=$(findmnt --fstab -T / -o SOURCE | tail +2)
-ROOT_FLAGS=$(findmnt --fstab -T / -o Options | tail +2)
+PART_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "$2" | awk 'END{print $1}'))
+PART_DEVICE=$(df -P -h -T "$2" | awk 'END{print $1}')
+PART_DEVICE_NUM=$(echo $PART_DEVICE | sed "s#$PART_BLOCK##")
 
-# Add bls_boot to /root partition
-sudo parted $BOOT_BLOCK set $BOOT_DEVICE_NUM bls_boot on
+echo "Partition Block: $PART_BLOCK"
+echo "Partition Device: $PART_DEVICE"
+echo "Partition Device ID: $PART_DEVICE_NUM"
+
+# Add bls_PART to /root partition
+if [[ $1 == bls_boot ]]
+then
+echo "Adding flag: $1"
+sudo parted $PART_BLOCK set $PART_DEVICE_NUM bls_boot on
+fi
