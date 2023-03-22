@@ -10,7 +10,7 @@ then
 	echo "UEFI Detected! Installing systemd-boot"
 	sudo parted $BOOT_BLOCK set $BOOT_DEVICE_NUM bls_boot on
 	for i in $(/usr/bin/apt --installed list 2>/dev/null | grep grub | cut -d"/" -f1 | grep -vi grub-common) ; do apt remove -y $i || echo "no action needed for $i" ; done || true
-	bootctl install --no-variables || true
+	bootctl install || true
 	SDB_EFI=$(bootctl -p) || true
 	cp -f /etc/calamares/config/loader.conf $SDB_EFI/loader/loader.conf || true
 	mkdir -p /tmp/update-systemd-boot || true
