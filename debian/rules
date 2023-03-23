@@ -11,13 +11,13 @@ override_dh_missing:
 	cp -vr common/modules/automirror debian/calamares-settings-ubuntu-common/usr/lib/$(DEB_HOST_MULTIARCH)/calamares/modules
 	mkdir -pv debian/calamares-settings-ubuntu-common/etc/calamares/modules
 	mkdir -pv debian/calamares-settings-ubuntu-common/usr/bin
-	mkdir -pv debian/calamares-settings-ubuntu-common/etc/initramfs-tools/hooks
+	mkdir -pv debian/calamares-settings-ubuntu-common/etc/calamares/config
 	cp -vr common/modules/*.conf debian/calamares-settings-ubuntu-common/etc/calamares/modules
 	cp -vr common/calamares-add-flags debian/calamares-settings-ubuntu-common/usr/bin/
 	cp -vr common/calamares-install-bootloader debian/calamares-settings-ubuntu-common/usr/bin/
 	cp -vr common/calamares-logs-helper  debian/calamares-settings-ubuntu-common/usr/bin/
 	cp -vr common/calamares-setup-cryptsetup debian/calamares-settings-ubuntu-common/usr/bin/
-	cp -vr common/crypt debian/calamares-settings-ubuntu-common/etc/initramfs-tools/hooks/
+	cp -vr common/crypt debian/calamares-settings-ubuntu-common/etc/calamares/config/
 	chmod -R 755 debian/calamares-settings-ubuntu-common/usr/lib/
 	chmod 644 debian/calamares-settings-ubuntu-common/usr/lib/$(DEB_HOST_MULTIARCH)/calamares/modules/automirror/automirror.conf
 	chmod 644 debian/calamares-settings-ubuntu-common/usr/lib/$(DEB_HOST_MULTIARCH)/calamares/modules/automirror/module.desc

@@ -1,6 +1,8 @@
 #! /usr/bin/bash
 CRYPT_MAPPER="$(findmnt --fstab -T / -o SOURCE | tail +2 | sed "s#/dev/mapper/##")"
-CRYPTTAB_ENTRY="$(cat /etc/crypttab | grep $CRYPT_MAPPER)"
+CRYPTTAB_ENTRY="$(cat /etc/crypttab | grep $CRYPT_MAPPER || true)"
+
+cp -fv /etc/calamares/config/crypt /etc/initramfs-tools/hooks/
 
 if [[ ! -z $CRYPTTAB_ENTRY ]];
 then
@@ -10,7 +12,7 @@ CRYPTTAB_OPTIONS="$(echo $CRYPTTAB_ENTRY | cut -f4 -d" ")"
 
 sed -i "s+$CRYPT_MAPPER+#"$CRYPT_MAPPER"+" "/etc/crypttab"
 
-echo -e "$CRYPT_MAPPER\t$CRYPTTAB_DEVICE\tnone\tluks,timeout=-1" >> "/etc/crypttab"
+echo -e "$CRYPT_MAPPER\t$CRYPTTAB_DEVICE\tnone\tluks" >> "/etc/crypttab"
 
 echo "ASKPASS=y" >> /etc/cryptsetup-initramfs/conf-hook
 fi
