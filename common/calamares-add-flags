@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 PART_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "$1" | awk 'END{print $1}'))
 PART_DEVICE=$(df -P -h -T "$1" | awk 'END{print $1}')
-PART_DEVICE_NUM=$(echo $PART_DEVICE | sed "s#$PART_BLOCK##")
+PART_DEVICE_NUM=$(echo $PART_DEVICE | sed "s#$PART_BLOCK##" | tr -dc '0-9')
 
 echo "Partition Block: $PART_BLOCK"
 echo "Partition Device: $PART_DEVICE"
