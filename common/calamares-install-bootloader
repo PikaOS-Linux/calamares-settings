@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 BOOT_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "/boot" | awk 'END{print $1}'))
 BOOT_DEVICE=$(df -P -h -T "/boot" | awk 'END{print $1}')
-BOOT_DEVICE_NUM=$(echo $BOOT_DEVICE | sed "s#$BOOT_BLOCK##")
+BOOT_DEVICE_NUM=$(echo $BOOT_DEVICE | sed "s#$BOOT_BLOCK##" | tr -dc '0-9')
 ROOT_UUID=$(findmnt --fstab -T / -o SOURCE | tail +2)
 ROOT_FLAGS=$(findmnt --fstab -T / -o Options | tail +2)
 
