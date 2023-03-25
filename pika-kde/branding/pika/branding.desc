@@ -29,3 +29,5 @@ style:
    sidebarBackground:    "#292F34"
    sidebarText:          "#FFFFFF"
    sidebarTextSelect:    "#292F34"
+   sidebarTextHighlight: "#D35400"
+
