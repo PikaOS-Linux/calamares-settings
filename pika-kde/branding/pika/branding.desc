@@ -23,7 +23,7 @@ images:
 
 slideshow:               "show.qml"
 
-sidebar: widget
+sidebar:                 none
 
 style:
    sidebarBackground:    "#292F34"
