@@ -5,8 +5,6 @@ BOOT_DEVICE_NUM=$(echo $BOOT_DEVICE | sed "s#$BOOT_BLOCK##" | tr -dc '0-9')
 ROOT_UUID=$(findmnt --fstab -T / -o SOURCE | tail +2)
 ROOT_FLAGS=$(findmnt --fstab -T / -o Options | tail +2)
 
-/usr/bin/apt install --yes --option Acquire::Retries=5 --option /var/cache/apt/archives/plymouth*.deb || true
-
 if [ -d /sys/firmware/efi ]
 then
 	echo "UEFI Detected! Installing systemd-boot"
