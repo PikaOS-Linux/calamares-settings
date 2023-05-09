@@ -1,3 +1,10 @@
+calamares-settings-ubuntu (100:7.93) lunar; urgency=low
+
+  * Update for lunar
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
+
+
 calamares-settings-ubuntu (100:7.93) kinetic; urgency=low
 
   * First release

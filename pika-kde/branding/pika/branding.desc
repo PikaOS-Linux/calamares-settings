@@ -9,7 +9,7 @@ strings:
     productName:         PikaOS
     shortProductName:    PikaOS
     version:             22.10
-    shortVersion:        kinetic
+    shortVersion:        lunar
     versionedName:       PikaOS
     shortVersionedName:  PikaOS 22.10
     bootloaderEntryName: PikaOS
