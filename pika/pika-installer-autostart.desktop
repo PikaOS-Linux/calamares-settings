@@ -1,6 +1,6 @@
 [Desktop Entry]
 Icon=calamares
-Name=Install PikaOS 22.10
+Name=Install PikaOS 23.04
 Exec=pika-installer
 Icon=calamares
 Terminal=false

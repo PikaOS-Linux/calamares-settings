@@ -17,7 +17,7 @@ Presentation
             id: image1
             horizontalAlignment: Text.Center
             smooth: true
-            source: "background.jpg"
+            source: "background.png"
         }
     }
 }
