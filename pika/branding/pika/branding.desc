@@ -8,10 +8,10 @@ windowPlacement: center
 strings:
     productName:         PikaOS
     shortProductName:    PikaOS
-    version:             22.10
+    version:             23.04
     shortVersion:        lunar
     versionedName:       PikaOS
-    shortVersionedName:  PikaOS 22.10
+    shortVersionedName:  PikaOS 23.04
     bootloaderEntryName: PikaOS
     productUrl:          https://github.com/PikaOS-Linux
     supportUrl:          https://github.com/PikaOS-Linux
@@ -19,7 +19,7 @@ strings:
 images:
     productLogo:         "icon.png"
     productIcon:         "icon.png"
-    productWelcome:      "background.jpg"
+    productWelcome:      "background.png"
 
 slideshow:               "show.qml"
 
