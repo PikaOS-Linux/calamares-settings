@@ -1,3 +1,9 @@
+calamares-settings-ubuntu (100:7.94~99pika2.lunar) lunar; urgency=low
+
+  * Smol fix
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
+
 calamares-settings-ubuntu (100:7.94~99pika1.lunar) lunar; urgency=low
 
   * Update for lunar
