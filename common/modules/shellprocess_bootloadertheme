@@ -1,0 +1,5 @@
+---
+dontChroot: false
+timeout: 0
+script:
+    - apt install -y /var/cache/apt/archives/pika-refind-theme*.deb
