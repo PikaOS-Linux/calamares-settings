@@ -1,4 +1,4 @@
-calamares-settings-ubuntu (100:7.97~99pika2.lunar) lunar; urgency=low
+calamares-settings-ubuntu (100:7.98~99pika2.lunar) lunar; urgency=low
 
   * Default to btrfs properly this time
 
