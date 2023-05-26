@@ -1,4 +1,9 @@
 #! /bin/bash
+
+# Disable screen lock
+kwriteconfig5 --file kscreenlockerrc --group Daemon --key Autolock false
+qdbus org.freedesktop.ScreenSaver /ScreenSaver configure
+
 if [ ! -d /sys/firmware/efi ]
 then 
 zenity --warning --title='Legacy System Detected' --text='You are not running in UEFI mode!\nPikaOS may not boot.\nPlease Switch to UEFI'
