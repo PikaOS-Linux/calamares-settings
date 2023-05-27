@@ -1,0 +1,26 @@
+#!/bin/bash
+
+selectedboard=$(cat /etc/default/keyboard | grep XKBLAYOUT= | cut -f2 -d\")
+
+for d in /home/*/ ; do
+    mkdir -p $d.config/fcitx5/
+    touch $d.config/fcitx5/profile
+    echo '[Groups/0]
+# Group Name
+Name=Default
+# Layout
+Default Layout='$selectedboard'
+# Default Input Method
+DefaultIM=keyboard-'$selectedboard'
+
+[Groups/0/Items/0]
+# Name
+Name=keyboard-'$selectedboard'
+# Layout
+Layout=
+
+[GroupOrder]
+0=Default' >> $d.config/fcitx5/profile
+done
+
+fcitx5 -d &
