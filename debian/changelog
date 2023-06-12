@@ -1,3 +1,9 @@
+calamares-settings-ubuntu (100:12.0.0-99pika2.lunar) lunar; urgency=low
+
+  * typo fix
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
+
 calamares-settings-ubuntu (100:11.0.0-99pika1.lunar) lunar; urgency=low
 
   * typo fix
