@@ -21,6 +21,15 @@ Layout=
 
 [GroupOrder]
 0=Default' >> $d.config/fcitx5/profile
+
+if test -f "$d.config/hypr/hyprland.conf"; then
+    rpl='#kb_layout='
+    wth='kb_layout='$selectedboard
+    sed -i -e "s/$rpl/$wth/g" $d.config/hypr/hyprland.conf
+fi
 done
 
-fcitx5 -d &
+if command -v fcitx5 &> /dev/null
+then
+    fcitx5 -d &
+fi
