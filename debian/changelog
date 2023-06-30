@@ -1,3 +1,9 @@
+calamares-settings-ubuntu (100:13.2.0-99pika1.lunar) lunar; urgency=low
+
+  * Kill me
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
+
 calamares-settings-ubuntu (100:13.1.0-99pika1.lunar) lunar; urgency=low
 
   * Keyboard fixes for hyprland
