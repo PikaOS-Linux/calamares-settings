@@ -2,6 +2,8 @@
 
 selectedboard=$(cat /etc/default/keyboard | grep XKBLAYOUT= | cut -f2 -d\")
 
+echo 'KEYMAP='$selectedboard | tee /etc/vconsole.conf
+
 for d in /home/*/ ; do
     mkdir -p $d.config/fcitx5/
     touch $d.config/fcitx5/profile
