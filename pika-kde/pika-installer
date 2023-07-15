@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# Disable Auto Suspend
+cp -vf /etc/calamares/modules/powermanagementprofilesrc ~/.config/ || exit 1
 # Disable screen lock
 kwriteconfig5 --file kscreenlockerrc --group Daemon --key Autolock false
 qdbus org.freedesktop.ScreenSaver /ScreenSaver configure
