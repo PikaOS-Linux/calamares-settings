@@ -28,9 +28,6 @@ if test -f "$d.config/hypr/hyprland.conf"; then
     rpl='#kb_layout='
     wth='kb_layout='$selectedboard
     sed -i -e "s/$rpl/$wth/g" $d.config/hypr/hyprland.conf
-    sed -e 's [initial_session] #[initial_session] g' -i /etc/greetd/config.toml
-    sed -e 's\user = "pikaos"\#user = "pikaos"\g' -i /etc/greetd/config.toml
-    sed -e 's\command = "Hyprland"\#command = "Hyprland"\g' -i /etc/greetd/config.toml
 fi
 done
 
