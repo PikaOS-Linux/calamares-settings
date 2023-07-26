@@ -1,3 +1,10 @@
+calamares-settings-ubuntu (100:13.4.0-99pika3.lunar) lunar; urgency=low
+
+  * hyprland hypr things
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
+
+
 calamares-settings-ubuntu (100:13.3.0-99pika3.lunar) lunar; urgency=low
 
   * F*ck keyboards
