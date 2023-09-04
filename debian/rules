@@ -18,3 +18,4 @@ override_dh_missing:
 	cp -vr common/calamares-keyboard-fixer debian/calamares-settings-ubuntu-common/usr/bin/
 	cp -vr common/crypt debian/calamares-settings-ubuntu-common/etc/calamares/config/
 	chmod -R 755 debian/calamares-settings-ubuntu-common/usr/lib/
+	chmod +x debian/calamares-settings-ubuntu-common/usr/bin/*
