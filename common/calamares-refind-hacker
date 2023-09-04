@@ -8,6 +8,3 @@ echo "Adding fallback refind entry"
 mkdir -p /boot/EFI/BOOT
 cp -vf  /boot/EFI/refind/refind_x64.efi /boot/EFI/BOOT/BOOTX64.EFI
 efibootmgr -c -d $BOOT_BLOCK -p $BOOT_DEVICE_NUM -L "UEFI OS" -l "\EFI\BOOT\BOOTX64.EFI"
-
-echo "changing up refind_linux.conf"
-sed -i "s#root=#amd_prefcore=enable amd_pstate=active nowatchdog root=#" /boot/refind_linux.conf
