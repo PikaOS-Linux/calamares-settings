@@ -1,6 +1,0 @@
-pika/branding/ etc/calamares/
-pika/pika-installer usr/bin/
-pika/pika-installer.desktop usr/share/applications/
-pika/pika-installer-autostart.desktop etc/xdg/autostart
-pika/modules/ etc/calamares/
-pika/settings.conf etc/calamares/

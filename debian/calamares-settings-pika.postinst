@@ -1,1 +1,0 @@
-rm -rfv /usr/share/applications/calamares.desktop || true
