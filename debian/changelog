@@ -1,3 +1,9 @@
+calamares-settings-ubuntu (100:14.0.0-99pika1.lunar) lunar; urgency=low
+
+  * Refind fixes + Booster + hyprland package
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
+
 calamares-settings-ubuntu (100:13.4.0-99pika8.lunar) lunar; urgency=low
 
   * hyprland hypr things
