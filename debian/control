@@ -5,16 +5,6 @@ Maintainer: Ward Nakchbandi <hotrod.master@hotmail.com>
 Build-Depends: debhelper-compat (= 13), intltool, qttools5-dev-tools
 Standards-Version: 4.6.0
 
-Package: calamares-settings-pika
-Architecture: all
-Depends: calamares-settings-ubuntu-common (>= ${binary:Version}),
-         ${misc:Depends}, zenity
-Breaks: calamares-settings-ubuntustudio
-Conflicts: calamares-settings-ubuntustudio
-Description: PikaOS Calamares Settings and Branding
- This package contains the Calamares settings and branding for PikaOS.
- As part of the branding the installer slideshow is contained within.
-
 Package: calamares-settings-ubuntu-common
 Architecture: any
 Depends: calamares (>= 3.2.14~),
@@ -30,13 +20,36 @@ Description: Common Calamares Settings
  This package contains the common Calamares settings for all flavors.
  There is also a automirror Python script to set sources based on
  geolocation.
- 
+
+Package: calamares-settings-pika-gnome
+Architecture: all
+Depends: calamares-settings-ubuntu-common (>= ${binary:Version}),
+         ${misc:Depends}, zenity
+Breaks: calamares-settings-pika-hyprland, calamares-settings-pika-kde
+Conflicts: calamares-settings-pika-hyprland, calamares-settings-pika-kde
+Provides: calamares-settings-pika(= ${binary:Version})
+Description: PikaOS Gnome Calamares Settings and Branding
+ This package contains the Calamares settings and branding for PikaOS.
+ As part of the branding the installer slideshow is contained within.
+
 Package: calamares-settings-pika-kde
 Architecture: all
 Depends: calamares-settings-ubuntu-common (>= ${binary:Version}),
          ${misc:Depends}, zenity
-Breaks: calamares-settings-pika
-Conflicts: calamares-settings-pika
+Breaks: calamares-settings-pika-gnome, calamares-settings-pika-hyprland
+Conflicts: calamares-settings-pika-gnome, calamares-settings-pika-hyprland
+Provides: calamares-settings-pika(= ${binary:Version})
 Description: PikaOS KDE Calamares Settings and Branding
+ This package contains the Calamares settings and branding for PikaOS.
+ As part of the branding the installer slideshow is contained within.
+
+ Package: calamares-settings-pika-hyprland
+Architecture: all
+Depends: calamares-settings-ubuntu-common (>= ${binary:Version}),
+         ${misc:Depends}, zenity
+Breaks: calamares-settings-pika-gnome, calamares-settings-pika-kde
+Conflicts: calamares-settings-pika-gnome, calamares-settings-pika-kde
+Provides: calamares-settings-pika(= ${binary:Version})
+Description: PikaOS Hyprland Calamares Settings and Branding
  This package contains the Calamares settings and branding for PikaOS.
  As part of the branding the installer slideshow is contained within.

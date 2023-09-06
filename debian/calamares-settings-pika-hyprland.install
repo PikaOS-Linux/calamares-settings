@@ -1,0 +1,6 @@
+pika-hyprland/branding/ etc/calamares/
+pika-hyprland/pika-installer usr/bin/
+pika-hyprland/pika-installer.desktop usr/share/applications/
+pika-hyprland/pika-installer-autostart.desktop etc/xdg/autostart
+pika-hyprland/modules/ etc/calamares/
+pika-hyprland/settings.conf etc/calamares/

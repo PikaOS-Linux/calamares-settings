@@ -1,0 +1,6 @@
+pika-gnome/branding/ etc/calamares/
+pika-gnome/pika-installer usr/bin/
+pika-gnome/pika-installer.desktop usr/share/applications/
+pika-gnome/pika-installer-autostart.desktop etc/xdg/autostart
+pika-gnome/modules/ etc/calamares/
+pika-gnome/settings.conf etc/calamares/
