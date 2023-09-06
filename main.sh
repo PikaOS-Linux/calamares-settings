@@ -6,7 +6,7 @@ cp -rvf ./* ./calamares-settings-ubuntu || echo
 cd ./calamares-settings-ubuntu
 
 # Get build deps
-apt-get install qttools5-dev-tools -y
+apt-get update -y
 apt-get build-dep ./ -y
 
 # Build package
