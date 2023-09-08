@@ -1,3 +1,9 @@
+calamares-settings-ubuntu (100:16.0.0-99pika.lunar) lunar; urgency=low
+
+  * Weird fix for weird calamares
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Sat, 01 Oct 2022 14:50:00 +0200
+
 calamares-settings-ubuntu (100:15.0.0-99pika1.lunar) lunar; urgency=low
 
   * Refind fixes + Booster + hyprland package
