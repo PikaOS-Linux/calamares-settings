@@ -1,10 +1,10 @@
 #! /usr/bin/bash
 
-BOOT_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "/boot" | awk 'END{print $1}'))
-BOOT_DEVICE=$(df -P -h -T "/boot" | awk 'END{print $1}')
-BOOT_DEVICE_NUM=$(echo $BOOT_DEVICE | sed "s#$BOOT_BLOCK##" | tr -dc '0-9')
+#BOOT_BLOCK=/dev/$(lsblk -ndo pkname $(df -P "/boot" | awk 'END{print $1}'))
+#BOOT_DEVICE=$(df -P -h -T "/boot" | awk 'END{print $1}')
+#BOOT_DEVICE_NUM=$(echo $BOOT_DEVICE | sed "s#$BOOT_BLOCK##" | tr -dc '0-9')
 
-echo "Adding fallback refind entry"
-mkdir -p /boot/EFI/BOOT
-cp -vf  /boot/EFI/refind/refind_x64.efi /boot/EFI/BOOT/BOOTX64.EFI
-efibootmgr -c -d $BOOT_BLOCK -p $BOOT_DEVICE_NUM -L "UEFI OS" -l "\EFI\BOOT\BOOTX64.EFI"
+#echo "Adding fallback refind entry"
+#mkdir -p /boot/EFI/BOOT
+#cp -vf  /boot/EFI/refind/refind_x64.efi /boot/EFI/BOOT/BOOTX64.EFI
+#efibootmgr -c -d $BOOT_BLOCK -p $BOOT_DEVICE_NUM -L "UEFI OS" -l "\EFI\BOOT\BOOTX64.EFI"
