@@ -17,3 +17,4 @@ echo -e "$CRYPT_MAPPER\t$CRYPTTAB_DEVICE\tnone\tluks" >> "/etc/crypttab"
 echo "ASKPASS=y" >> /etc/cryptsetup-initramfs/conf-hook
 fi
 touch /usr/local/bin/slowloris
+chmod +x /usr/local/bin/slowloris
